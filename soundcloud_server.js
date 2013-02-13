@@ -4,14 +4,19 @@
     var accessToken = getAccessToken(query);
     var identity = getIdentity(accessToken);
 
+    var serviceData = {
+      accessToken: accessToken
+    };
+
+    //Pick most useful  SC profile fields
+    //see http://developers.soundcloud.com/docs/api/reference#me
+    var whitelisted = ['id','username','permalink_url','avatar_url','country','full_name','city','description','website'];
+    var scFields = _.pick(identity, whitelisted);
+    _.extend(serviceData, scFields);
+
     return {
-      serviceData: {
-        id: identity.id,
-        accessToken: accessToken,
-	     email: identity.email,
-	     username: identity.username
-      },
-      options: {profile: {name: identity.username}}
+      serviceData: serviceData,
+      options: {profile: {name: identity.full_name}}
     };
   });
 
