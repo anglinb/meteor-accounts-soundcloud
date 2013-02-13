@@ -39,7 +39,7 @@
   var getIdentity = function (accessToken) {
     var result = Meteor.http.get(
       "https://api.soundcloud.com/me",
-      {params: {access_token: accessToken}});
+      {params: {oauth_token: accessToken, format: "json"}});
     if (result.error)
       throw result.error;
     return result.data;
