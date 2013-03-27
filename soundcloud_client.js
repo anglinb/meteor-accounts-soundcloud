@@ -11,17 +11,18 @@
       callback && callback(new Accounts.ConfigError("Service not configured"));
       return;
     }
+
     var state = Meteor.uuid();
 
     var loginUrl =
-    'https://soundcloud.com/connect' +
-    '?client_id=' + config.clientId +
-    '&redirect_uri=' + Meteor.absoluteUrl('_oauth/soundcloud?close') +
-    '&scope=non-expiring' +
-    '&response_type=code_and_token' +
-    '&display=popup' +
-    '&state=' + state;
+      'https://soundcloud.com/connect' +
+      '?client_id=' + config.clientId +
+      '&redirect_uri=' + Meteor.absoluteUrl('_oauth/soundcloud?close') +
+      '&scope=non-expiring' +
+      '&response_type=code_and_token' +
+      '&display=popup' +
+      '&state=' + state;
 
     Accounts.oauth.initiateLogin(state, loginUrl, callback, {width: 900, height: 450});
   };
-}) ();
+}());
