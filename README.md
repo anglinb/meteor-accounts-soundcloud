@@ -14,5 +14,5 @@ SoundCloud OAuth2 login service for use with Meteor Auth
 3. Call `Meteor.loginWithSoundcloud();`
 
 ### Credits
-* @mataspetrikas for the SoundCloud port 
+* [@mataspetrikas](https://github.com/mataspetrikas) for the SoundCloud port 
 * Shamelessly based upon [@Jabbslad](https://github.com/Jabbslad/accounts-github) Github OAuth2 login service
