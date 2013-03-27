@@ -3,9 +3,6 @@
 SoundCloud OAuth2 login service for use with Meteor Auth
 
 ### Package Dependencies
-
-This login service depends on the bleeding edge changes within the Meteor Auth branch. See [https://github.com/meteor/meteor/wiki/Getting-started-with-Auth](https://github.com/meteor/meteor/wiki/Getting-started-with-Auth) for further details.
-
 * accounts ([Meteor Docs](http://docs.meteor.com/#accounts_api))
 * accounts-oauth2-helper ([Meteor Docs](http://docs.meteor.com/#meteor_loginwithexternalservice))
 * http
@@ -17,5 +14,5 @@ This login service depends on the bleeding edge changes within the Meteor Auth b
 3. Call `Meteor.loginWithSoundcloud();`
 
 ### Credits
-
+* @mataspetrikas for the SoundCloud port 
 * Shamelessly based upon [@Jabbslad](https://github.com/Jabbslad/accounts-github) Github OAuth2 login service
