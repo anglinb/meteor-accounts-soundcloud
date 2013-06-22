@@ -1,8 +1,11 @@
 {
   "name": "accounts-soundcloud",
-  "description": "SoundCloud OAuth2 login service for use with Meteor Auth",
+  "description": "SoundCloud for Meteor Accounts",
   "homepage": "https://github.com/sylvaingi/meteor-accounts-soundcloud",
-  "author": "Matas Petrikas <matas.petrikas@gmail.com>, Sylvain Gizard <sylvain.gizard@gmail.com>",
-  "version": "0.1.0",
-  "git": "https://github.com/sylvaingi/meteor-accounts-soundcloud.git"
+  "author": "Sylvain Gizard <sylvain.gizard@gmail.com>",
+  "version": "0.1.1",
+  "git": "https://github.com/sylvaingi/meteor-accounts-soundcloud.git",
+  "packages": {
+    "soundcloud": "0.1.0"
+  }
 }
